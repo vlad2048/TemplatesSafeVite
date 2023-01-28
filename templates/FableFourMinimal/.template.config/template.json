@@ -2,13 +2,13 @@
 	"$schema": "http://json.schemastore.org/template",
 	"author": "Vlad",
 	"classifications": [ "Web" ],
-	"identity": "SafeVite",
-	"name": "SafeVite",
-	"shortName": "SafeVite",
+	"identity": "FableFourMinimal",
+	"name": "FableFourMinimal",
+	"shortName": "FableFourMinimal",
 	"tags": {
 		"language": "F#",
 		"type": "project"
 	},
-	"sourceName": "SafeViteWebApp",
+	"sourceName": "FableFourMinimal",
   	"preferNameDirectory": false
 }

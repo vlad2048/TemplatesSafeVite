@@ -4,3 +4,10 @@
 *.user
 [Bb]in/
 [Oo]bj/
+
+.fake
+
+_test/
+
+**/node_modules/
+**/packages/

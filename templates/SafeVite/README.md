@@ -1,53 +1,78 @@
-# SAFE Template
-
-This template can be used to generate a full-stack web application using the [SAFE Stack](https://safe-stack.github.io/). It was created using the dotnet [SAFE Template](https://safe-stack.github.io/docs/template-overview/). If you want to learn more about the template why not start with the [quick start](https://safe-stack.github.io/docs/quickstart/) guide?
-
-## Install pre-requisites
-
-You'll need to install the following pre-requisites in order to build SAFE applications
-
-* [.NET Core SDK](https://www.microsoft.com/net/download) 6.0 or higher
-* [Node 16](https://nodejs.org/en/download/)
-
-## Starting the application
-
-Before you run the project **for the first time only** you must install dotnet "local tools" with this command:
-
-```bash
-dotnet tool restore
+#       Run
+[rem]:  ###
 ```
-
-To concurrently run the server and the client components in watch mode use the following command:
-
-```bash
 dotnet run
 ```
 
-Then open `http://localhost:8080` in your browser.
+&nbsp;
 
-The build project in root directory contains a couple of different build targets. You can specify them after `--` (target name is case-insensitive).
+&nbsp;
 
-To run concurrently server and client tests in watch mode (you can run this command in parallel to the previous one in new terminal):
+#       Package Management
+[rem]:  ##################
 
-```bash
-dotnet run -- RunTests
+## Paket
+It's using **Paket** instead of nuget for .net packages
+```ps1
+# show installed packages (listed in ./paket.dependencies)
+dotnet paket show-installed-packages
+
+# update dependencies
+# first: update .fsproj files to net7.0
+dotnet paket update --no-install
+dotnet paket update
+
+# update Fable to v4
+# dotnet tool update fable --prerelease
 ```
 
-Client tests are available under `http://localhost:8081` in your browser and server tests are running in watch mode in console.
-
-Finally, there are `Bundle` and `Azure` targets that you can use to package your app and deploy to Azure, respectively:
-
-```bash
-dotnet run -- Bundle
-dotnet run -- Azure
+## Femto
+Using **Femto** to keep JS packages (package.json) in sync with .Net packages (Paket)
+```ps1
+# analyze
+dotnet femto src\Client
+# resolve
+dotnet femto --resolve src\Client
 ```
 
-## SAFE Stack Documentation
+## Upgrade to Fable v4
+- delete .\gobal.json
+- change Shared/Server/Client .fsproj files to net7.0 (but not Build.fsproj)
+- yarn
+- update
+```ps1
+# udpate dotnet tools
+dotnet tool update paket --prerelease
+dotnet tool update fable --prerelease
+dotnet tool update femto --prerelease
+dotnet tool update fantomas-tool --prerelease
 
-If you want to know more about the full Azure Stack and all of it's components (including Azure) visit the official [SAFE documentation](https://safe-stack.github.io/docs/).
+# update paket dependencies
+dotnet paket update
+```
 
-You will find more documentation about the used F# components at the following places:
 
-* [Saturn](https://saturnframework.org/)
-* [Fable](https://fable.io/docs/)
-* [Elmish](https://elmish.github.io/elmish/)
+
+&nbsp;
+
+&nbsp;
+
+#       CSS / SCSS
+[rem]:  ##########
+
+To import a .css (or .scss) file from JS and have vite.js watch it for changes,
+add this line to ```src/Client/App.fs```:
+```fs
+Fable.Core.JsInterop.import "" "./public/base.scss"
+```
+And create ```src/Client/public/base.scss```
+
+Note, this is how Fable translates the path given in F# to the path written in the .js file:
+```
+         base.scss		=>		                      base.scss
+        /base.scss		=>		       ../../../../../base.scss
+       ./base.scss		=>		                   ../base.scss
+  public/base.scss		=>		               public/base.scss
+ /public/base.scss		=>		../../../../../public/base.scss
+./public/base.scss		=>		            ../public/base.scss
+```
