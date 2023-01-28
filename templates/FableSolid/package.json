@@ -1,0 +1,10 @@
+{
+    "license": "MIT",
+    "devDependencies": {
+        "vite": "^4.0.4",
+        "vite-plugin-solid": "^2.5.0"
+    },
+    "dependencies": {
+        "solid-js": "^1.6.9"
+    }
+}

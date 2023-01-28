@@ -19,7 +19,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**;templates\FableFourMinimal\paket-files\**;templates\FableFourMinimal\src\Client\output\**;templates\FableFourMinimal\node_modules\**;templates\FableFourMinimal\packages\**" />
+    <Content Include="templates\**\*" Exclude="
+        templates\**\bin\**;
+        templates\**\obj\**;
+        templates\**\paket-files\**;
+        templates\**\node_modules\**;
+        templates\**\src\Client\output\**
+    "/>
     <Compile Remove="**\*" />
   </ItemGroup>
 
