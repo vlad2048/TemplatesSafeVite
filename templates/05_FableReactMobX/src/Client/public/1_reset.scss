@@ -1,0 +1,31 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+body {
+    font-family: Roboto;
+    display: flex;
+    flex-direction: column;
+    font-size: var(--textsize);
+    color: var(--color-text);
+    background-color: var(--color-back);
+}
+
+#elmish-app {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}

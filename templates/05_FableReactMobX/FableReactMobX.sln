@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{10AA2FA8-FA22-4DDA-BF63-E1862E37DFA0}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Client", "src\Client\Client.fsproj", "{3300E700-89BB-4F2B-95A0-FDDAEB5D71A5}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Shared", "src\Shared\Shared.fsproj", "{60A9D8A6-F744-4235-BD9F-6E18562C447D}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Server", "src\Server\Server.fsproj", "{BDD1D292-B4D5-4F5E-A3EC-51E36CD5811C}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Build", "Build.fsproj", "{2DDEFEB1-EA9A-4C7F-B709-B3F49B954638}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{44A27C91-F006-46DA-AA73-7549520126D9}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		package.json = package.json
+		paket.dependencies = paket.dependencies
+		paket.lock = paket.lock
+		README.md = README.md
+		style.css = style.css
+		vite.config.js = vite.config.js
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3300E700-89BB-4F2B-95A0-FDDAEB5D71A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3300E700-89BB-4F2B-95A0-FDDAEB5D71A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3300E700-89BB-4F2B-95A0-FDDAEB5D71A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3300E700-89BB-4F2B-95A0-FDDAEB5D71A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60A9D8A6-F744-4235-BD9F-6E18562C447D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60A9D8A6-F744-4235-BD9F-6E18562C447D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60A9D8A6-F744-4235-BD9F-6E18562C447D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60A9D8A6-F744-4235-BD9F-6E18562C447D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDD1D292-B4D5-4F5E-A3EC-51E36CD5811C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDD1D292-B4D5-4F5E-A3EC-51E36CD5811C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDD1D292-B4D5-4F5E-A3EC-51E36CD5811C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDD1D292-B4D5-4F5E-A3EC-51E36CD5811C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DDEFEB1-EA9A-4C7F-B709-B3F49B954638}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DDEFEB1-EA9A-4C7F-B709-B3F49B954638}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DDEFEB1-EA9A-4C7F-B709-B3F49B954638}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DDEFEB1-EA9A-4C7F-B709-B3F49B954638}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3300E700-89BB-4F2B-95A0-FDDAEB5D71A5} = {10AA2FA8-FA22-4DDA-BF63-E1862E37DFA0}
+		{60A9D8A6-F744-4235-BD9F-6E18562C447D} = {10AA2FA8-FA22-4DDA-BF63-E1862E37DFA0}
+		{BDD1D292-B4D5-4F5E-A3EC-51E36CD5811C} = {10AA2FA8-FA22-4DDA-BF63-E1862E37DFA0}
+	EndGlobalSection
+EndGlobal

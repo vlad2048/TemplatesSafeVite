@@ -5,6 +5,7 @@
 yarn add solid-js
 yarn add -D vite-plugin-solid
 
+# Implicitely depends on Fable.Solid
 dotnet paket add Feliz.JSX.Solid --project src\Client\Client.fsproj
 ```
 

@@ -1,0 +1,14 @@
+{
+	"$schema": "http://json.schemastore.org/template",
+	"author": "Vlad",
+	"classifications": [ "Web" ],
+	"identity": "03_FableRemoting",
+	"name": "03_FableRemoting",
+	"shortName": "03_FableRemoting",
+	"tags": {
+		"language": "F#",
+		"type": "project"
+	},
+	"sourceName": "FableRemoting",
+  	"preferNameDirectory": false
+}

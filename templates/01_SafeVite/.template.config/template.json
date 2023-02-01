@@ -1,0 +1,14 @@
+{
+	"$schema": "http://json.schemastore.org/template",
+	"author": "Vlad",
+	"classifications": [ "Web" ],
+	"identity": "01_SafeVite",
+	"name": "01_SafeVite",
+	"shortName": "01_SafeVite",
+	"tags": {
+		"language": "F#",
+		"type": "project"
+	},
+	"sourceName": "SafeViteWebApp",
+  	"preferNameDirectory": false
+}

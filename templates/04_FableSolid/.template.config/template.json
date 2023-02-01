@@ -1,0 +1,14 @@
+{
+	"$schema": "http://json.schemastore.org/template",
+	"author": "Vlad",
+	"classifications": [ "Web" ],
+	"identity": "04_FableSolid",
+	"name": "04_FableSolid",
+	"shortName": "04_FableSolid",
+	"tags": {
+		"language": "F#",
+		"type": "project"
+	},
+	"sourceName": "FableSolid",
+  	"preferNameDirectory": false
+}

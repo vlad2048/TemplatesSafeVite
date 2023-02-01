@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="paket.references" />
+    <Content Include="index.html" />
+    <Content Include="public\favicon.ico" />
+    <Content Include="public\0_vars.scss" />
+    <Content Include="public\1_reset.scss" />
+    <Content Include="public\2_ctrls.scss" />
+    <Content Include="public\10_app-layout.scss" />
+    <Compile Include="Utils\ColorUtils.fs" />
+    <Compile Include="Layout\FlexLayout.fs" />
+    <Compile Include="Model.fs" />
+    <Compile Include="UICtrls\TextCtrl.fs" />
+    <Compile Include="UI\Panels\FilterPanel.fs" />
+    <Compile Include="AppLayout.fs" />
+    <Compile Include="App.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Shared.fsproj" />
+  </ItemGroup>
+  
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+  
+</Project>

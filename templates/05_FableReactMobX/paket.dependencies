@@ -1,0 +1,23 @@
+source https://api.nuget.org/v3/index.json
+framework: auto-detect
+storage: none
+
+nuget Fable.Elmish.HMR
+nuget Fake.Core.Target
+
+nuget FSharp.Core
+nuget FSharp.Data
+nuget MobF
+
+nuget Saturn
+
+nuget Fable.Core 4.0.0-theta-007     content: none
+nuget Fable.Browser.Dom
+nuget Fable.Remoting.Client
+nuget Fable.Remoting.Giraffe
+
+nuget Fable.Elmish
+nuget Fable.Elmish.React
+nuget Fable.Elmish.Debugger
+
+nuget Feliz

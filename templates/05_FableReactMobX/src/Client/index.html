@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+    <title>FableReactMobX</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="0_vars.scss">
+    <link rel="stylesheet" type="text/css" href="1_reset.scss">
+    <link rel="stylesheet" type="text/css" href="2_ctrls.scss">
+    <link rel="stylesheet" type="text/css" href="10_app-layout.scss">
+</head>
+<body>
+    <div id="elmish-app"></div>
+    
+    <script>
+        // Hack needed for Fable.Elmish.Debugger after upgrading to Fable 4
+        global = window;
+    </script>
+    <script src="output/App.jsx" type="module"></script>
+</body>
+</html>
